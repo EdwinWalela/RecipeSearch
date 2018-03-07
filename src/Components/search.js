@@ -1,38 +1,45 @@
-import React,{ Component } from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
+
+// Components
+import Header from './header';
+import SearchBar from './searchbar';
+import ResultContainer from './resultsContainer';
 
 
-class SearchBar extends Component{
+class SearchPage extends Component {
 	
 	state = {
-		query : ''
-	}
-
-	handleSubmit = (e) => {
-		e.preventDefault();
-		e.currentTarget.reset();
+		results : [],
+		loading : true
 	}
 	
-	handleChange = (e) => {
-		this.setState({
-			query :  e.target.value
-		})
-	}
+	performSearch = ( query = 'chicken') => {
+		axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`)
+			.then(response => {
+				this.setState({
+					results : response.data.meals,
+					loading : false
+				})
+			})
+			.catch(error => {
+				console.log(error);
+		});
+	} 
 	
 	render(){
 		return(
 			<div>
-				<p className="search-tip"><strong>Tip:</strong> Use Simple Terms e.g "chicken" :)</p>
-				<form onSubmit={this.handleSubmit}>
-					<input type="text"
-						 className="search-input"
-						 onChange={this.handleChange} 
-						 placeholder="Suprise me..."
-						   />
-					<i class="fas fa-search"></i>
-				</form>
+				<Header title="Search" />
+				<SearchBar search={this.performSearch} />
+				{
+					(this.state.loading)?
+						<p style={{"textAlign":"center"}}>make a search...</p>:
+						  <ResultContainer results={this.state.results} />
+				}
 			</div>
 		);
 	}
 }
 
-export default SearchBar;
+export default SearchPage;
