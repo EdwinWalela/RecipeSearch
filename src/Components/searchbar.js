@@ -23,14 +23,12 @@ class SearchBar extends Component{
 			<div>
 			<br/>
 				<p className="search-tip"><strong>Tip:</strong> Use Simple Terms e.g "chicken" :)</p>
-				
 				<form onSubmit={this.handleSubmit}>
 					<input type="text"
 						 className="search-input"
 						 onChange={this.handleChange} 
-						 placeholder="Suprise me..."
-						   />
-					<i className="fas fa-search" onClick={this.handleSubmit}></i>
+						 placeholder="Suprise me..."/>
+					<i className="fas fa-search search" onClick={this.handleSubmit}></i>
 				</form>
 			</div>
 		);

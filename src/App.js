@@ -1,20 +1,33 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import { BrowserRouter, Route , Switch, withRouter } from 'react-router-dom';
+import Recipe from './Components/recipe'
+
+// components
 import SearchPage from './Components/search';
 
 class App extends Component {
 	
-	constructor(props){
-		super(props);
-		
-		};
+	state = {
+		object : []
+	}
 	
-	componentDidMount = () => {
+	handleSelection = (query) => {
+		this.setState({
+			object : query
+		})
 	}
 	
   render() {
     return (
-			<SearchPage />
+			<div>
+				<BrowserRouter>
+					<div>
+						<Route exact path="/" render={ () => <SearchPage selection={this.handleSelection}/>}/>
+						<Route path="/recipe" render={ () => <Recipe data={this.state.object} /> }/>
+					</div>
+				</BrowserRouter>
+			</div>
+			
 		);
   }
 }

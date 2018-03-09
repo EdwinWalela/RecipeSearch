@@ -1,38 +1,37 @@
 import React, { Component } from 'react';
+import { Random } from './Data/noResults';
+import { Link, BrowserRouter } from 'react-router-dom';
 
 class  ListItems extends Component{
 
+	handleSelection = (query) => {
+		this.props.selection(query);
+	}
+	
 	render(){
 		const Results = this.props.data;
-
+		
 		let Items;
 		if(Results && Results.length > 0){
-			Items = Results.map(meal =>
-					<li key={meal.idMeal}>{meal.strMeal}</li>
+			Items = Results.map((meal,index) =>
+					<li className="list-items" key={meal.idMeal}>
+						<p className="meal title">{meal.strMeal}</p>
+						<p className="meal area">{meal.strArea}</p>
+						<img className="meal-thumb" src={meal.strMealThumb} alt=""/>
+						<Link to="/recipe">
+							<p className="cook" onClick={()=> this.handleSelection(index)}>Cook Now</p>
+						</Link>
+					</li>
 			);	
 		}else{
-			
-			
-			let Choice = Math.floor(Math.random()*11);
-			Items = ["Sorry, I couldn't find that :(",
-							 "Umm, try something else.",
-							 "Lol, I've never heard of that.",
-							 "I dont think that exists yet.",
-							 "Please make a resonable search.",
-							 ":| Are you sure that exisit?",
-							 "I don't understand your language :|",
-							 "Are you serious?",
-							 "Try something more realistic please.",
-							 "Is that even edible?",
-							 "This is your last chance."
-							];
-			Items = Items[Choice]
+			let Choice = Math.floor(Math.random()*12);
+			Items = Random[Choice]
 		}
-
 		return (
 			<div>
-		
-				{Items}
+				<ul className="ul-list">
+					{Items}
+				</ul>
 			</div>
 		);
 	}
