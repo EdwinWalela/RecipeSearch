@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Random } from './Data/noResults';
-import { Link, BrowserRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class  ListItems extends Component{
 

@@ -6,7 +6,7 @@ const YoutubePlayer = (props) => {
 		<div className="player">
 			<p>Lost? Follow along on 
 				<a href={Vid}> Youtube 
-					<i class="fab fa-youtube"></i>
+					<i className="fab fa-youtube"></i>
 				</a></p>
 		</div>
 	)

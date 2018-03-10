@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route , Switch, withRouter } from 'react-router-dom';
+import { BrowserRouter, Route  } from 'react-router-dom';
 import Recipe from './Components/recipe'
 
 // components

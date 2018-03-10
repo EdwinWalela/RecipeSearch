@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
 import axios from 'axios';
 
 // Components
 import Header from './header';
 import SearchBar from './searchbar';
 import ResultContainer from './resultsContainer';
-import Recipe from './recipe';
 
 
 class SearchPage extends Component {
@@ -17,7 +15,7 @@ class SearchPage extends Component {
 	}
 	
 	performSearch = (query) => {
-		axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`)
+		axios.get(`https://www.themealdb.com/api/json/v1/1352/search.php?s=${query}`)
 			.then(response => {
 				this.setState({
 					results : response.data.meals,
