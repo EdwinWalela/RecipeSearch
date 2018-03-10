@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route  } from 'react-router-dom';
+import { HashRouter, Route  } from 'react-router-dom';
 import Recipe from './Components/recipe'
 
 // components
@@ -20,12 +20,12 @@ class App extends Component {
   render() {
     return (
 			<div>
-				<BrowserRouter>
+				<HashRouter>
 					<div>
 						<Route exact path="/" render={ () => <SearchPage selection={this.handleSelection}/>}/>
 						<Route path="/recipe" render={ () => <Recipe data={this.state.object} /> }/>
 					</div>
-				</BrowserRouter>
+				</HashRouter>
 			</div>
 			
 		);
