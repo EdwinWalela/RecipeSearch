@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Components
 import Header from './header';
@@ -14,10 +15,11 @@ const Recipe = (props) => {
 			<div className="runner">
 				<img className="recipe-cover" src={props.data.strMealThumb} alt="" />
 			</div>
+				<Link to="/"><i className="fas fa-search new-search"></i></Link>
+				<i class="fas fa-shopping-basket"></i>
 			<div>
 				<img className="recipe-thumb" src={props.data.strMealThumb} alt="" />
 			</div>
-			
 			<div>
 				<p className="specs">Category:</p>
 				<p className="specs right">Origin:</p>
@@ -27,7 +29,7 @@ const Recipe = (props) => {
 			<Ingridients info={props.data} />
 			<Directions info={props.data.strInstructions} />
 			<YoutubePlayer link={props.data.strYoutube} />
-			</div>
+		</div>
 	)
 }
 

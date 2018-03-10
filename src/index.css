@@ -23,6 +23,7 @@ button:focus {
 	
 .search-input{
 	width: 60%;
+	max-width: 300px;
 	display: block;
 	margin:auto;
 	height: 2em;
@@ -55,8 +56,8 @@ button:focus {
 	position: relative;
 	bottom:25px;
 	left:82%;
-	
 }
+
 
 
 .search-tip{
@@ -91,10 +92,13 @@ button:focus {
 	padding-left: 5px;
 	border: solid 2px rgba(0,0,0,0.1);
 	width: 100%;
+	max-width: 500px;
 	margin:1em 1em 1em -1.3em;
 	height: 9.5em;
 	box-shadow: 1px 5px 10px rgba(0,0,0,0.1);
 }
+
+
 
 .meal{
 	position: relative;
@@ -111,6 +115,8 @@ button:focus {
 	line-height: 2em;
 	font-size: 0.7em;
 }
+
+
 
 .meal-thumb{
 	position: relative;
@@ -130,6 +136,9 @@ button:focus {
 	width: 25%;
 }
 
+
+
+
 .runner{
 	border:solid 0px transparent;
 	border-bottom:solid 3px #fff;
@@ -137,6 +146,9 @@ button:focus {
 	height: 10em;
 	overflow: hidden;
 }
+
+
+	
 
 .recipe-thumb{
 	position:relative;
@@ -157,6 +169,8 @@ button:focus {
 	width: 100%;
 	filter: blur(3px);
 }
+
+
 
 .specs{
 	font-size: 0.8em;
@@ -200,6 +214,9 @@ button:focus {
 	bottom:9.1em;
 	left: 6em;
 }
+
+
+
 .ing-head{
 	text-align: center;
 	position: relative;
@@ -212,39 +229,44 @@ button:focus {
 .ing{
 	position: relative;
 	bottom:4em;
-	line-height: 1em;
+	line-height: 1.5em;
 	right:2em;
 }
 .ing li{
+	overflow:scroll;
 	text-align: right;
 	position: relative;
 	right: 35px;
 	border:solid 0px;
-	height: 2em;
+	height: 2.3em;
 	width: 60%;
 }
 
 .msr{
 	position: relative;
-	bottom:45em;
+	bottom:51em;
 	left:13em;
-	line-height: 1em;
+	line-height: 1.5em;
 }
 
 .msr li{
+	overflow:scroll;
 	text-align: left;
 	position: relative;
 	right: 35px;
 	border:solid 0px;
-	height: 2em;
+	height: 2.3em;
 	width: 40%;
 }
+
+
+
 
 .dir-head{
 	border-bottom: solid 2px #AB47BC;
 	text-align: center;
 	position: relative;
-	bottom:52em;
+	bottom:50em;
 	width: 50%;
 	margin: auto;
 }
@@ -269,8 +291,135 @@ button:focus {
 	border-top: solid #AB47BC 2px;
 }
 
+.new-search{
+	color:#fff;
+	background-color:#AB47BC;
+	z-index: 100;
+	position: absolute;
+	font-size: 1em;
+	top:10.7em;
+	left: 80%;
+	border: solid 2px;
+	border-radius: 50%;
+	padding: 10px;
+}
 
+.fa-shopping-basket{
+	display: none;
+	color:#fff;
+	background-color:#AB47BC;
+	z-index: 100;
+	position: absolute;
+	font-size: 1.3em;
+	top:8.1em;
+	left: 8%;
+	border: solid 2px;
+	border-radius: 50%;
+	padding: 10px;
+}
 
+@media screen and (min-width:800px){
+	.search{
+	color: purple;
+	position: relative;
+	bottom:25px;
+	left:60%;
+}
+
+}
+@media screen and (min-width:800px){
+	.list-items{
+	position: relative;
+	padding-left: 5px;
+	border: solid 2px rgba(0,0,0,0.1);
+	width: 100%;
+	max-width: 500px;
+	margin:1em auto 1em auto;
+	height: 9.5em;
+	box-shadow: 1px 5px 10px rgba(0,0,0,0.1);
+}
+}
+@media screen and (min-width:800px){
+
+	.runner{
+		margin: auto;
+		border:solid 0px transparent;
+		border-bottom:solid 3px #fff;
+		border-bottom-left-radius: 50%;
+		border-bottom-right-radius:50% ;
+		width: 80%;
+		height: 15em;
+		overflow: hidden;
+	}
+	
+	.recipe-thumb{
+	position:relative;
+	bottom:5em;
+	left:45%;
+	border:solid #fff 5px; 
+	border-radius: 50%;
+	height: 150px;
+	width: 150px;
+}
+
+	.category{
+	font-size: 0.7em;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: center;
+	position: relative;
+	height: 3em;
+	width: 22%;
+	display: inline-block;
+	bottom:9em;
+	left:-28.5em;
+}
+
+.origin{
+	font-size: 0.7em;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: right;
+	position: relative;
+	height: 3em;
+	width: 26%;
+	display: inline-block;
+	bottom:9.1em;
+	left: 17.5em;
+}
+	
+	.ing{
+	position: relative;
+	bottom:4em;
+	line-height: 1em;
+	left:5em;
+}
+.msr{
+	position: relative;
+	bottom:45em;
+	left:30em;
+	line-height: 1em;
+}
+	
+	.ing li{
+	text-align: right;
+	position: relative;
+	right: 35px;
+	border:solid 0px;
+	height: 2em;
+	width: 60%;
+}
+.msr li{
+	text-align: left;
+	position: relative;
+	right: 35px;
+	border:solid 0px;
+	height: 2em;
+	width: 40%;
+}
+
+	
+}
 
 
 
