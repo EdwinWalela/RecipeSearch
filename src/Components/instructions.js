@@ -1,10 +1,19 @@
 import React from 'react';
 
 const Direction = (props) => {
+	let paragraph = props.info
+	const lines = paragraph.split(".")
+	
+	const inst = lines.map((line,key)=>
+			<li key={key}>{ line }</li>
+			)
+	
 	return(
 		<div>
 		<p className="dir-head">Directions</p>
-		<p className="direction">{props.info}</p>
+		<ol class="instruction">
+			{ inst }
+		</ol>
 		</div>
 	)
 }

@@ -14,17 +14,18 @@ class  ListItems extends Component{
 		let Items;
 		if(Results && Results.length > 0){
 			Items = Results.map((meal,index) =>
-					<li className="list-items" key={meal.idMeal}>
+					<Link to="/recipe">
+					<li onClick={()=> this.handleSelection(index)} className="list-items" key={meal.idMeal}>
 						<p className="meal title">{meal.strMeal}</p>
 						<p className="meal area">{meal.strArea}</p>
 						<img className="meal-thumb" src={meal.strMealThumb} alt=""/>
-						<Link to="/recipe">
-							<p className="cook" onClick={()=> this.handleSelection(index)}>Cook Now</p>
-						</Link>
+						
+						
 					</li>
+					</Link>
 			);	
 		}else{
-			let Choice = Math.floor(Math.random()*12);
+			let Choice = Math.floor(Math.random()*3);
 			Items = Random[Choice]
 		}
 		return (

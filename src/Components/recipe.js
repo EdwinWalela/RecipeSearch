@@ -6,6 +6,7 @@ import Header from './header';
 import Ingridients from './ingridients';
 import Directions from './instructions';
 import YoutubePlayer from './player';
+import Footer from './footer';
 
 
 const Recipe = (props) => {
@@ -29,7 +30,9 @@ const Recipe = (props) => {
 			<Ingridients info={props.data} />
 			<Directions info={props.data.strInstructions} />
 			<YoutubePlayer link={props.data.strYoutube} />
+		<Footer />
 		</div>
+		
 	)
 }
 

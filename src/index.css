@@ -8,6 +8,16 @@ body {
 	height: 100%;
 }
 
+
+*{
+	border:solid 0px;
+}
+
+a{
+	text-decoration: none;
+	
+}
+
 ul{
 		list-style: none;
 		line-height: 5em;
@@ -216,55 +226,58 @@ button:focus {
 }
 
 
+#ingredients{
+	border:solid 0px;
+	position: relative;
+	bottom:5em;
+}
 
 .ing-head{
 	text-align: center;
 	position: relative;
-	bottom:6em;
-	width: 50%;
+	width: 30%;
 	margin: auto;
 	border-bottom: solid 2px #AB47BC;
 }
 
 .ing{
+	width:30%;
+	border:solid  0px;
 	position: relative;
-	bottom:4em;
-	line-height: 1.5em;
-	right:2em;
-}
-.ing li{
-	text-align: right;
-	position: relative;
-	right: 35px;
-	border:solid 0px;
-	height: 2.3em;
-	width: 60%;
+	display:inline-block;
+	line-height: 3em;
+	left:15%;
 }
 
 .msr{
+	left: 16%;
+	width:32%;
+	border:solid  0px;
 	position: relative;
-	bottom:51em;
-	left:13em;
-	line-height: 1.5em;
+	display:inline-block;
+	line-height: 3em;
+}
+
+.ing li{
+	border-bottom: solid 1px;
+	text-align: center;
+	position: relative;
+	right: 35px;
+	height: 3em;
 }
 
 .msr li{
-	text-align: left;
+	border-bottom: solid 1px;
+	text-align: center;
 	position: relative;
 	right: 35px;
-	border:solid 0px;
-	height: 2.3em;
-	width: 40%;
+	height: 3em;
 }
-
-
-
 
 .dir-head{
 	border-bottom: solid 2px #AB47BC;
 	text-align: center;
 	position: relative;
-	bottom:50em;
 	width: 50%;
 	margin: auto;
 }
@@ -274,17 +287,27 @@ button:focus {
 	width: 90%;
 	position: relative;
 	padding: 10px;
-	bottom:50em;
 	line-height: 2em;
 	text-align: justify;
 	background-color: #e0e0e0;
+}
+
+.instruction{
+	width: 80%;
+	line-height: 2em;
+	text-align: left;
+}
+
+.instruction li {
+	margin-bottom: 5px;
+	background-color: rgba(0,0,0,0.1);
 }
 
 .player{
 	margin:auto;
 	text-align: center;
 	position: relative;
-	bottom:50em;
+	
 	width: 80%;
 	border-top: solid #AB47BC 2px;
 }
@@ -316,129 +339,40 @@ button:focus {
 	padding: 10px;
 }
 
-
-
-
-
-
-@media screen and (min-width:800px){
-	
-		.search{
-	color: purple;
-	position: relative;
-	bottom:25px;
-	left:60%;
-}
-
-	
-	.list-items{
-	position: relative;
-	padding-left: 5px;
-	border: solid 2px rgba(0,0,0,0.1);
+.footer{
+	color:#afafaf;
+	height: 2em;
 	width: 100%;
-	max-width: 500px;
-	margin:1em auto 1em auto;
-	height: 9.5em;
-	box-shadow: 1px 5px 10px rgba(0,0,0,0.1);
+	background-color: #4c4c4c;
 }
 
-	.ing li{
-	text-align: right;
-	position: relative;
-	right: 35px;
-	border:solid 0px;
-	height: 2.3em;
-	width: 60%;
-}
-.msr li{
-	text-align: left;
-	position: relative;
-	right: 35px;
-	border:solid 0px;
-	height: 2.3em;
-	width: 40%;
+.footer p {
+	font-size: 0.6em;
+	text-align: center;
+	line-height: 3.5em;
 }
 
-	.runner{
-		margin: auto;
-		border:solid 0px transparent;
-		border-bottom:solid 3px #fff;
-		border-bottom-left-radius: 50%;
-		border-bottom-right-radius:50% ;
-		width: 80%;
-		height: 15em;
-		overflow: hidden;
-	}
+@media screen and (max-width:500px){
 	
-	.recipe-thumb{
-	position:relative;
-	bottom:5em;
-	left:45%;
-	border:solid #fff 5px; 
-	border-radius: 50%;
-	height: 150px;
-	width: 150px;
-}
-
-	.category{
-	font-size: 0.7em;
-	font-weight: 500;
-	text-transform: uppercase;
+	.ing li{
+		overflow:scroll;
+	border-bottom: solid 1px;
 	text-align: center;
 	position: relative;
+	right: 35px;
 	height: 3em;
-	width: 22%;
-	display: inline-block;
-	bottom:9em;
-	left:-28.5em;
 }
 
-.origin{
-	font-size: 0.7em;
-	font-weight: 500;
-	text-transform: uppercase;
-	text-align: right;
-	position: relative;
-	height: 3em;
-	width: 26%;
-	display: inline-block;
-	bottom:9.1em;
-	left: 17.5em;
-}
-	
-	.ing{
-	position: relative;
-	bottom:4em;
-	line-height: 1em;
-	left:5em;
-}
-.msr{
-	position: relative;
-	bottom:45em;
-	left:30em;
-	line-height: 1em;
-}
-	
-	.ing li{
-	text-align: right;
-	position: relative;
-	right: 35px;
-	border:solid 0px;
-	height: 2em;
-	width: 60%;
-}
 .msr li{
+	overflow:scroll;
+	border-bottom: solid 1px;
 	text-align: left;
 	position: relative;
 	right: 35px;
-	border:solid 0px;
-	height: 2em;
-	width: 40%;
-}
-
+	height: 3em;
 	
 }
-
+}
 
 
 

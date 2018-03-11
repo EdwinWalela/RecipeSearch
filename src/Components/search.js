@@ -7,6 +7,7 @@ import SearchBar from './searchbar';
 import ResultContainer from './resultsContainer';
 
 
+
 class SearchPage extends Component {
 	
 	state = {
@@ -43,7 +44,7 @@ class SearchPage extends Component {
 							<p style={{"textAlign":"center"}}>make a search...</p>:
 							<ResultContainer results={this.state.results} onSelect={this.handleSelection} />
 					}
-
+			
 			</div>
 		
 		);
