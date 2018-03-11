@@ -16,7 +16,7 @@ class SearchPage extends Component {
 	}
 	
 	performSearch = (query) => {
-		axios.get(`https://www.themealdb.com/api/json/v1/1352/search.php?s=${query}`)
+		axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`)
 			.then(response => {
 				this.setState({
 					results : response.data.meals,
