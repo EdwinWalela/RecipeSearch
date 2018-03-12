@@ -21,7 +21,7 @@ class SearchBar extends Component{
 	render(){
 		return(
 			<div>
-			<br/>
+				<br/>
 				<p className="search-tip"><strong>Tip:</strong> Use Simple Terms e.g "chicken" :)</p>
 				<form onSubmit={this.handleSubmit}>
 					<input type="text"

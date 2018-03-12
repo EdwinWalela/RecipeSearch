@@ -16,7 +16,7 @@ const Recipe = (props) => {
 			<div className="runner">
 				<img className="recipe-cover" src={props.data.strMealThumb} alt="" />
 			</div>
-				<Link to="/"><i className="fas fa-search new-search"></i></Link>
+				<Link to="/search"><i className="fas fa-search new-search"></i></Link>
 				<i className="fas fa-shopping-basket"></i>
 			<div>
 				<img className="recipe-thumb" src={props.data.strMealThumb} alt="" />

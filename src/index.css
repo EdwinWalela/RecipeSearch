@@ -8,6 +8,11 @@ body {
 	height: 100%;
 }
 
+@media screen and (min-width:800px){
+	*{
+		display: none;
+	}
+}
 
 *{
 	border:solid 0px;
@@ -15,12 +20,15 @@ body {
 
 a{
 	text-decoration: none;
-	
+	color:inherit;
 }
 
 ul{
-		list-style: none;
-		line-height: 5em;
+	list-style: none;	
+}
+
+.ul-list {
+	line-height: 5em;
 }
 
 input:focus,
@@ -30,7 +38,95 @@ button:focus {
     outline: none;
 }
 
-	
+.landing{
+	position: relative;
+	background: url("https://i.imgur.com/pFLvT14.png") no-repeat;
+	background-size: cover;
+	height: 750px;
+}
+
+@media screen and (max-height:500px){
+	.landing{
+	position: relative;
+	background: url("https://i.imgur.com/pFLvT14.png") no-repeat;
+	background-size: contain;
+	height: 450px;
+}
+}
+@media screen and (max-height:600px){
+	.landing{
+	position: relative;
+	background: url("https://i.imgur.com/pFLvT14.png") no-repeat;
+	background-size: contain;
+		height: 550px;
+}
+}
+@media screen and (max-height:700px){
+	.landing{
+	position: relative;
+	background: url("https://i.imgur.com/pFLvT14.png") no-repeat;
+	background-size: cover;
+		height: contain;
+}
+}
+
+.nav-bar{
+	height: 2.5em;
+	top:90%;
+	padding: 0;
+	position: fixed;
+	line-height: 1em;
+	text-align: center;
+	width: 100%;
+	background-color:#672972;
+	color:#fff;
+	z-index: 100;
+}
+
+.nav-bar li {
+	font-size: 1.3em;
+	line-height: 2.2em;
+	display: inline-block;
+	margin:0% 1%;
+	width: 31.33333333%;
+	height: 100%;
+}
+
+.active{
+	background-color: #fff;
+	color:#AB47BC;
+	padding: 4.1% 0px 1.8% 0px;
+	opacity: 0;
+	animation: active 0.4s linear;
+	animation-fill-mode: forwards;
+}
+
+@keyframes active {
+	0%		{
+		opacity: 0;
+	}
+	100% 	{
+		opacity: 1;
+	}
+}
+
+.landing-head{
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: 600;
+	color:#672972;
+	margin: 30% auto;
+	background-color:#fff;
+	line-height: 2em;
+	height: 2em;
+
+}
+
+.landing-lead{
+	text-align: center;
+	color:#fff;
+}
+
 .search-input{
 	width: 60%;
 	max-width: 300px;
@@ -68,8 +164,6 @@ button:focus {
 	left:82%;
 }
 
-
-
 .search-tip{
 	text-align: center;
 	font-size: .7em;
@@ -81,11 +175,11 @@ button:focus {
 }
 
 .header{
-	border: solid 1px #AB47BC;
+	border: solid 1px #672972;
 	text-align: center;
-	height: 2em;
-	line-height: 0em;
-	background-color: #AB47BC;
+	height: 2.2em;
+	line-height: 0.5em;
+	background-color: #672972;
 	color:#fff;
 }
 
@@ -108,8 +202,6 @@ button:focus {
 	box-shadow: 1px 5px 10px rgba(0,0,0,0.1);
 }
 
-
-
 .meal{
 	position: relative;
 	left:30%;
@@ -125,8 +217,6 @@ button:focus {
 	line-height: 2em;
 	font-size: 0.7em;
 }
-
-
 
 .meal-thumb{
 	position: relative;
@@ -146,9 +236,6 @@ button:focus {
 	width: 25%;
 }
 
-
-
-
 .runner{
 	border:solid 0px transparent;
 	border-bottom:solid 3px #fff;
@@ -156,9 +243,6 @@ button:focus {
 	height: 10em;
 	overflow: hidden;
 }
-
-
-	
 
 .recipe-thumb{
 	position:relative;
@@ -307,14 +391,13 @@ button:focus {
 	margin:auto;
 	text-align: center;
 	position: relative;
-	
 	width: 80%;
 	border-top: solid #AB47BC 2px;
 }
 
 .new-search{
 	color:#fff;
-	background-color:#AB47BC;
+	background-color:#672972;
 	z-index: 100;
 	position: absolute;
 	font-size: 1em;
@@ -352,10 +435,50 @@ button:focus {
 	line-height: 3.5em;
 }
 
+.issue{
+	margin-top: 7%;
+	color:rgba(0,0,0,0.7);
+	font-size: 0.7em;
+	text-align: center;
+}
+
+.abt-form{
+	text-align: center;
+	margin: 2em 0;
+}
+
+.abt-form input{
+	margin: 10% auto;
+	display: block;
+	width: 80%;
+	
+}
+
+#mail{
+	border-bottom: 2px rgba
+}
+
+#msg{
+	line-height: -5em;
+	height: 5em;
+	border: solid 1px rgba(0,0,0,0.2);
+	overflow:wrap;
+	width: 80%;
+	height: 10em;
+}
+
+#send{
+	width: 40%;
+	height: 2em;
+	font-size: 1.1em;
+	background-color:#672972 ;
+	color:#fff;
+}
+
 @media screen and (max-width:500px){
 	
 	.ing li{
-		overflow:scroll;
+	overflow:scroll;
 	border-bottom: solid 1px;
 	text-align: center;
 	position: relative;

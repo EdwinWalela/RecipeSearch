@@ -5,6 +5,7 @@ import axios from 'axios';
 import Header from './header';
 import SearchBar from './searchbar';
 import ResultContainer from './resultsContainer';
+import NavBar from './navbar';
 
 
 
@@ -16,12 +17,11 @@ class SearchPage extends Component {
 	}
 	
 	performSearch = (query) => {
-		axios.get(`https://www.themealdb.com/api/json/v1/1352/search.php?s=${query}`)
+		axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`)
 			.then(response => {
 				this.setState({
 					results : response.data.meals,
-					loading : false,
-					selection : []
+					loading : false
 				})
 			})
 			.catch(error => {
@@ -37,6 +37,7 @@ class SearchPage extends Component {
 		return(
 			
 			<div>
+			<NavBar />
 				<Header title="Search" />
 				<SearchBar search={this.performSearch} />
 					{
