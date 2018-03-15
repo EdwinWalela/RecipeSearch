@@ -19,8 +19,6 @@ class  ListItems extends Component{
 						<p className="meal title">{meal.strMeal}</p>
 						<p className="meal area">{meal.strArea}</p>
 						<img className="meal-thumb" src={meal.strMealThumb} alt=""/>
-						
-						
 					</li>
 					</Link>
 			);	

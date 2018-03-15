@@ -9,7 +9,10 @@ import YoutubePlayer from './player';
 import Footer from './footer';
 
 
+
+
 const Recipe = (props) => {
+
 	return(
 		<div className="selection">
 			<Header title={props.data.strMeal} />
@@ -20,7 +23,8 @@ const Recipe = (props) => {
 				<i className="fas fa-shopping-basket"></i>
 			<div>
 				<img className="recipe-thumb" src={props.data.strMealThumb} alt="" />
-			</div>
+				<p id="info">Tap on image to enlarge.</p>
+				</div>
 			<div>
 				<p className="specs">Category:</p>
 				<p className="specs right">Origin:</p>

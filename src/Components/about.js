@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './header';
 import NavBar from './navbar';
-import Footer from './footer';
 
 
 const About = () => {

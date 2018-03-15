@@ -88,7 +88,7 @@ button:focus {
 	line-height: 2.2em;
 	display: inline-block;
 	margin:0% 1%;
-	width: 31.33333333%;
+	width: 20%;
 	height: 100%;
 }
 
@@ -227,6 +227,7 @@ button:focus {
 	border-radius: 100%;
 }
 
+
 .cook{
 	position: relative;
 	bottom:12.5em;
@@ -252,6 +253,15 @@ button:focus {
 	border-radius: 50%;
 	height: 150px;
 	width: 150px;
+	z-index: 100;
+	transition: 0.3s linear;
+}
+
+.recipe-thumb:hover{
+	transform: scale(2);
+	border-radius: 0%;
+	border:solid #fff 2px;
+	transition: all 0.2s linear;
 }
 
 .recipe-cover{
@@ -264,7 +274,18 @@ button:focus {
 	filter: blur(3px);
 }
 
-
+#info{
+	font-size: 0.7em;
+	width: 50%;
+	text-align: center;
+	height: 2em;
+	line-height: 2em;
+	position: absolute;
+	top:270px;
+	left: 26%;
+	color:#AB47BC;
+	text-decoration: underline;
+}
 
 .specs{
 	font-size: 0.8em;
@@ -293,7 +314,7 @@ button:focus {
 	width: 22%;
 	display: inline-block;
 	bottom:9em;
-	left:-7em;
+	left:-7.5em;
 }
 
 .origin{
@@ -473,6 +494,49 @@ button:focus {
 	font-size: 1.1em;
 	background-color:#672972 ;
 	color:#fff;
+}
+
+.grid{
+	margin: 10% auto;
+	text-align: center;
+}
+
+.grid-items{
+	position: relative;
+	background-color:#fff;
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+	display: inline-block;
+	height: 3em;
+	line-height: 3.2em;
+	font-weight:500;
+	letter-spacing: 1px;
+	width: 80%;
+	margin: 30px 0px;
+	color:#672972;
+	animation: bubble 2s ease-in-out infinite;
+}
+
+.logo-joy{
+	height:20px;
+	width:30px;
+	margin-left: 5px;
+	
+}
+
+.explore{
+	bottom:4.5em;
+}
+
+@keyframes bubble {
+	0%	{
+		transform:scale(1);
+	}
+	50%	{
+		transform:scale(1.02);
+	}
+	100%{
+		transform:scale(1);
+	}
 }
 
 @media screen and (max-width:500px){
